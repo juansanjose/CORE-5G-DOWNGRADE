@@ -632,6 +632,7 @@ int amf_namf_callback_handle_dereg_notify(
         ogs_expect(r == OGS_OK);
         ogs_assert(r != OGS_ERROR);
     }
+    
 
 cleanup:
     memset(&sendmsg, 0, sizeof(sendmsg));

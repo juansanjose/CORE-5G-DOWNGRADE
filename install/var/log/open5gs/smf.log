@@ -1,0 +1,180 @@
+Open5GS daemon v2.6.4-22-g93bcd7f
+
+06/15 21:38:59.113: [app] INFO: Configuration: '/home/vagrant/joder/open5gs/install/etc/open5gs/smf.yaml' (../lib/app/ogs-init.c:126)
+06/15 21:38:59.113: [app] INFO: File Logging: '/home/vagrant/joder/open5gs/install/var/log/open5gs/smf.log' (../lib/app/ogs-init.c:129)
+06/15 21:38:59.150: [metrics] INFO: metrics_server() [http://127.0.0.4]:9090 (../lib/metrics/prometheus/context.c:299)
+06/15 21:38:59.206: [gtp] INFO: gtp_server() [127.0.0.4]:2123 (../lib/gtp/path.c:30)
+06/15 21:38:59.206: [gtp] INFO: gtp_server() [::1]:2123 (../lib/gtp/path.c:30)
+06/15 21:38:59.206: [gtp] INFO: gtp_server() [127.0.0.4]:2152 (../lib/gtp/path.c:30)
+06/15 21:38:59.206: [gtp] INFO: gtp_server() [::1]:2152 (../lib/gtp/path.c:30)
+06/15 21:38:59.206: [pfcp] INFO: pfcp_server() [127.0.0.4]:8805 (../lib/pfcp/path.c:30)
+06/15 21:38:59.206: [pfcp] INFO: pfcp_server() [::1]:8805 (../lib/pfcp/path.c:30)
+06/15 21:38:59.206: [pfcp] INFO: ogs_pfcp_connect() [127.0.0.7]:8805 (../lib/pfcp/path.c:61)
+06/15 21:38:59.206: [sbi] INFO: NF Service [nsmf-pdusession] (../lib/sbi/context.c:1438)
+06/15 21:38:59.207: [sbi] INFO: nghttp2_server() [http://127.0.0.4]:7777 (../lib/sbi/nghttp2-server.c:395)
+06/15 21:38:59.207: [app] INFO: SMF initialize...done (../src/smf/app.c:31)
+06/15 21:38:59.208: [sbi] WARNING: [7] Failed to connect to 127.0.1.10 port 7777 after 0 ms: Connection refused (../lib/sbi/client.c:626)
+06/15 21:38:59.208: [sbi] WARNING: ogs_sbi_client_handler() failed [-1] (../lib/sbi/path.c:59)
+06/15 21:39:06.719: [pfcp] WARNING: [1] LOCAL  No Reponse. Give up! for step 1 type 5 peer [127.0.0.7]:8805 (../lib/pfcp/xact.c:599)
+06/15 21:39:10.219: [smf] WARNING: Retry to association with peer [127.0.0.7]:8805 failed (../src/smf/pfcp-sm.c:109)
+06/15 21:39:10.219: [sbi] WARNING: [09882e2a-0bc5-41ee-9b2d-17a56ffe17ab] Retry to registration with NRF (../lib/sbi/nf-sm.c:175)
+06/15 21:39:10.219: [sbi] WARNING: [7] Failed to connect to 127.0.1.10 port 7777 after 0 ms: Connection refused (../lib/sbi/client.c:626)
+06/15 21:39:10.219: [sbi] WARNING: ogs_sbi_client_handler() failed [-1] (../lib/sbi/path.c:59)
+06/15 21:39:17.786: [pfcp] WARNING: [2] LOCAL  No Reponse. Give up! for step 1 type 5 peer [127.0.0.7]:8805 (../lib/pfcp/xact.c:599)
+06/15 21:39:21.230: [smf] WARNING: Retry to association with peer [127.0.0.7]:8805 failed (../src/smf/pfcp-sm.c:109)
+06/15 21:39:21.231: [sbi] WARNING: [09882e2a-0bc5-41ee-9b2d-17a56ffe17ab] Retry to registration with NRF (../lib/sbi/nf-sm.c:175)
+06/15 21:39:21.231: [sbi] WARNING: [7] Failed to connect to 127.0.1.10 port 7777 after 0 ms: Connection refused (../lib/sbi/client.c:626)
+06/15 21:39:21.231: [sbi] WARNING: ogs_sbi_client_handler() failed [-1] (../lib/sbi/path.c:59)
+06/15 21:39:23.016: [diam] INFO: CONNECTED TO 'pcrf.localdomain' (SCTP,soc#11): (../lib/diameter/common/logger.c:108)
+06/15 21:39:28.770: [pfcp] WARNING: [3] LOCAL  No Reponse. Give up! for step 1 type 5 peer [127.0.0.7]:8805 (../lib/pfcp/xact.c:599)
+06/15 21:39:32.235: [smf] WARNING: Retry to association with peer [127.0.0.7]:8805 failed (../src/smf/pfcp-sm.c:109)
+06/15 21:39:32.235: [sbi] WARNING: [09882e2a-0bc5-41ee-9b2d-17a56ffe17ab] Retry to registration with NRF (../lib/sbi/nf-sm.c:175)
+06/15 21:39:32.236: [sbi] WARNING: [7] Failed to connect to 127.0.1.10 port 7777 after 0 ms: Connection refused (../lib/sbi/client.c:626)
+06/15 21:39:32.236: [sbi] WARNING: ogs_sbi_client_handler() failed [-1] (../lib/sbi/path.c:59)
+06/15 21:39:39.755: [pfcp] WARNING: [4] LOCAL  No Reponse. Give up! for step 1 type 5 peer [127.0.0.7]:8805 (../lib/pfcp/xact.c:599)
+06/15 21:39:43.238: [smf] WARNING: Retry to association with peer [127.0.0.7]:8805 failed (../src/smf/pfcp-sm.c:109)
+06/15 21:39:43.238: [sbi] WARNING: [09882e2a-0bc5-41ee-9b2d-17a56ffe17ab] Retry to registration with NRF (../lib/sbi/nf-sm.c:175)
+06/15 21:39:43.239: [sbi] WARNING: [7] Failed to connect to 127.0.1.10 port 7777 after 0 ms: Connection refused (../lib/sbi/client.c:626)
+06/15 21:39:43.239: [sbi] WARNING: ogs_sbi_client_handler() failed [-1] (../lib/sbi/path.c:59)
+06/15 21:39:48.246: [smf] INFO: PFCP associated [127.0.0.7]:8805 (../src/smf/pfcp-sm.c:186)
+06/15 21:39:54.245: [sbi] WARNING: [09882e2a-0bc5-41ee-9b2d-17a56ffe17ab] Retry to registration with NRF (../lib/sbi/nf-sm.c:175)
+06/15 21:39:54.246: [sbi] WARNING: [7] Failed to connect to 127.0.1.10 port 7777 after 0 ms: Connection refused (../lib/sbi/client.c:626)
+06/15 21:39:54.246: [sbi] WARNING: ogs_sbi_client_handler() failed [-1] (../lib/sbi/path.c:59)
+06/15 21:40:05.252: [sbi] WARNING: [09882e2a-0bc5-41ee-9b2d-17a56ffe17ab] Retry to registration with NRF (../lib/sbi/nf-sm.c:175)
+06/15 21:40:05.253: [sbi] WARNING: [7] Failed to connect to 127.0.1.10 port 7777 after 0 ms: Connection refused (../lib/sbi/client.c:626)
+06/15 21:40:05.253: [sbi] WARNING: ogs_sbi_client_handler() failed [-1] (../lib/sbi/path.c:59)
+06/15 21:40:16.260: [sbi] WARNING: [09882e2a-0bc5-41ee-9b2d-17a56ffe17ab] Retry to registration with NRF (../lib/sbi/nf-sm.c:175)
+06/15 21:40:16.261: [sbi] WARNING: [7] Failed to connect to 127.0.1.10 port 7777 after 0 ms: Connection refused (../lib/sbi/client.c:626)
+06/15 21:40:16.261: [sbi] WARNING: ogs_sbi_client_handler() failed [-1] (../lib/sbi/path.c:59)
+06/15 21:40:26.521: [app] INFO: SIGINT received (../src/main.c:53)
+06/15 21:40:26.521: [app] INFO: Open5GS daemon terminating... (../src/main.c:226)
+06/15 21:40:26.522: [smf] INFO: PFCP de-associated [127.0.0.7]:8805 (../src/smf/pfcp-sm.c:201)
+06/15 21:40:26.654: [app] INFO: SMF terminate...done (../src/smf/app.c:39)
+Open5GS daemon v2.6.4-22-g93bcd7f
+
+06/15 21:40:29.062: [app] INFO: Configuration: '/home/vagrant/joder/open5gs/install/etc/open5gs/smf.yaml' (../lib/app/ogs-init.c:126)
+06/15 21:40:29.062: [app] INFO: File Logging: '/home/vagrant/joder/open5gs/install/var/log/open5gs/smf.log' (../lib/app/ogs-init.c:129)
+06/15 21:40:29.095: [metrics] INFO: metrics_server() [http://127.0.0.4]:9090 (../lib/metrics/prometheus/context.c:299)
+06/15 21:40:29.148: [gtp] INFO: gtp_server() [127.0.0.4]:2123 (../lib/gtp/path.c:30)
+06/15 21:40:29.148: [gtp] INFO: gtp_server() [::1]:2123 (../lib/gtp/path.c:30)
+06/15 21:40:29.148: [gtp] INFO: gtp_server() [127.0.0.4]:2152 (../lib/gtp/path.c:30)
+06/15 21:40:29.148: [gtp] INFO: gtp_server() [::1]:2152 (../lib/gtp/path.c:30)
+06/15 21:40:29.148: [pfcp] INFO: pfcp_server() [127.0.0.4]:8805 (../lib/pfcp/path.c:30)
+06/15 21:40:29.148: [pfcp] INFO: pfcp_server() [::1]:8805 (../lib/pfcp/path.c:30)
+06/15 21:40:29.148: [pfcp] INFO: ogs_pfcp_connect() [127.0.0.7]:8805 (../lib/pfcp/path.c:61)
+06/15 21:40:29.148: [sbi] INFO: NF Service [nsmf-pdusession] (../lib/sbi/context.c:1438)
+06/15 21:40:29.149: [sbi] INFO: nghttp2_server() [http://127.0.0.4]:7777 (../lib/sbi/nghttp2-server.c:395)
+06/15 21:40:29.149: [app] INFO: SMF initialize...done (../src/smf/app.c:31)
+06/15 21:40:29.149: [sbi] WARNING: [7] Failed to connect to 127.0.1.10 port 7777 after 0 ms: Connection refused (../lib/sbi/client.c:626)
+06/15 21:40:29.149: [sbi] WARNING: ogs_sbi_client_handler() failed [-1] (../lib/sbi/path.c:59)
+06/15 21:40:29.149: [smf] INFO: PFCP associated [127.0.0.7]:8805 (../src/smf/pfcp-sm.c:186)
+06/15 21:40:29.150: [diam] INFO: CONNECTED TO 'pcrf.localdomain' (SCTP,soc#19): (../lib/diameter/common/logger.c:108)
+06/15 21:40:40.168: [sbi] WARNING: [3f24ef1e-0bc5-41ee-83af-ff5de29b996d] Retry to registration with NRF (../lib/sbi/nf-sm.c:175)
+06/15 21:40:40.169: [sbi] WARNING: [7] Failed to connect to 127.0.1.10 port 7777 after 0 ms: Connection refused (../lib/sbi/client.c:626)
+06/15 21:40:40.169: [sbi] WARNING: ogs_sbi_client_handler() failed [-1] (../lib/sbi/path.c:59)
+06/15 21:40:51.172: [sbi] WARNING: [3f24ef1e-0bc5-41ee-83af-ff5de29b996d] Retry to registration with NRF (../lib/sbi/nf-sm.c:175)
+06/15 21:40:51.172: [sbi] WARNING: [7] Failed to connect to 127.0.1.10 port 7777 after 0 ms: Connection refused (../lib/sbi/client.c:626)
+06/15 21:40:51.172: [sbi] WARNING: ogs_sbi_client_handler() failed [-1] (../lib/sbi/path.c:59)
+06/15 21:41:02.179: [sbi] WARNING: [3f24ef1e-0bc5-41ee-83af-ff5de29b996d] Retry to registration with NRF (../lib/sbi/nf-sm.c:175)
+06/15 21:41:02.179: [sbi] WARNING: [7] Failed to connect to 127.0.1.10 port 7777 after 0 ms: Connection refused (../lib/sbi/client.c:626)
+06/15 21:41:02.179: [sbi] WARNING: ogs_sbi_client_handler() failed [-1] (../lib/sbi/path.c:59)
+06/15 21:41:13.188: [sbi] WARNING: [3f24ef1e-0bc5-41ee-83af-ff5de29b996d] Retry to registration with NRF (../lib/sbi/nf-sm.c:175)
+06/15 21:41:13.189: [sbi] WARNING: [7] Failed to connect to 127.0.1.10 port 7777 after 0 ms: Connection refused (../lib/sbi/client.c:626)
+06/15 21:41:13.189: [sbi] WARNING: ogs_sbi_client_handler() failed [-1] (../lib/sbi/path.c:59)
+06/15 21:41:24.217: [sbi] WARNING: [3f24ef1e-0bc5-41ee-83af-ff5de29b996d] Retry to registration with NRF (../lib/sbi/nf-sm.c:175)
+06/15 21:41:24.217: [sbi] WARNING: [7] Failed to connect to 127.0.1.10 port 7777 after 0 ms: Connection refused (../lib/sbi/client.c:626)
+06/15 21:41:24.217: [sbi] WARNING: ogs_sbi_client_handler() failed [-1] (../lib/sbi/path.c:59)
+06/15 21:41:35.235: [sbi] WARNING: [3f24ef1e-0bc5-41ee-83af-ff5de29b996d] Retry to registration with NRF (../lib/sbi/nf-sm.c:175)
+06/15 21:41:35.236: [sbi] WARNING: [7] Failed to connect to 127.0.1.10 port 7777 after 0 ms: Connection refused (../lib/sbi/client.c:626)
+06/15 21:41:35.236: [sbi] WARNING: ogs_sbi_client_handler() failed [-1] (../lib/sbi/path.c:59)
+06/15 21:41:44.949: [app] INFO: SIGINT received (../src/main.c:53)
+06/15 21:41:44.949: [app] INFO: Open5GS daemon terminating... (../src/main.c:226)
+06/15 21:41:44.950: [smf] INFO: PFCP de-associated [127.0.0.7]:8805 (../src/smf/pfcp-sm.c:201)
+06/15 21:41:45.070: [app] INFO: SMF terminate...done (../src/smf/app.c:39)
+Open5GS daemon v2.6.4-22-g93bcd7f
+
+06/15 21:43:51.135: [app] INFO: Configuration: '/home/vagrant/joder/open5gs/install/etc/open5gs/smf.yaml' (../lib/app/ogs-init.c:126)
+06/15 21:43:51.135: [app] INFO: File Logging: '/home/vagrant/joder/open5gs/install/var/log/open5gs/smf.log' (../lib/app/ogs-init.c:129)
+06/15 21:43:51.169: [metrics] INFO: metrics_server() [http://127.0.0.4]:9090 (../lib/metrics/prometheus/context.c:299)
+06/15 21:43:51.217: [gtp] INFO: gtp_server() [127.0.0.4]:2123 (../lib/gtp/path.c:30)
+06/15 21:43:51.217: [gtp] INFO: gtp_server() [::1]:2123 (../lib/gtp/path.c:30)
+06/15 21:43:51.217: [gtp] INFO: gtp_server() [127.0.0.4]:2152 (../lib/gtp/path.c:30)
+06/15 21:43:51.217: [gtp] INFO: gtp_server() [::1]:2152 (../lib/gtp/path.c:30)
+06/15 21:43:51.217: [pfcp] INFO: pfcp_server() [127.0.0.4]:8805 (../lib/pfcp/path.c:30)
+06/15 21:43:51.217: [pfcp] INFO: pfcp_server() [::1]:8805 (../lib/pfcp/path.c:30)
+06/15 21:43:51.217: [pfcp] INFO: ogs_pfcp_connect() [127.0.0.7]:8805 (../lib/pfcp/path.c:61)
+06/15 21:43:51.217: [sbi] INFO: NF Service [nsmf-pdusession] (../lib/sbi/context.c:1438)
+06/15 21:43:51.218: [sbi] FATAL: [No-CLIENT:No-SCP] Cannot send request [nnrf-nfm:nnrf-nfm:v1] (../lib/sbi/path.c:537)
+06/15 21:43:51.218: [sbi] FATAL: ogs_sbi_send_notification_request: should not be reached. (../lib/sbi/path.c:543)
+06/15 21:43:51.218: [core] FATAL: backtrace() returned 14 addresses (../lib/core/ogs-abort.c:37)
+/home/vagrant/joder/open5gs/install/lib/x86_64-linux-gnu/libogssbi.so.2(ogs_sbi_send_notification_request+0x4b8) [0x7fdf12ebdcb3]
+/home/vagrant/joder/open5gs/install/lib/x86_64-linux-gnu/libogssbi.so.2(ogs_nnrf_nfm_send_nf_register+0xfc) [0x7fdf12ebac17]
+/home/vagrant/joder/open5gs/install/lib/x86_64-linux-gnu/libogssbi.so.2(ogs_sbi_nf_state_will_register+0x2b6) [0x7fdf12ebeeb5]
+/home/vagrant/joder/open5gs/install/lib/x86_64-linux-gnu/libogscore.so.2(+0x2059f) [0x7fdf12ef659f]
+/home/vagrant/joder/open5gs/install/lib/x86_64-linux-gnu/libogscore.so.2(ogs_fsm_init+0x179) [0x7fdf12ef69c9]
+/home/vagrant/joder/open5gs/install/lib/x86_64-linux-gnu/libogssbi.so.2(ogs_sbi_nf_fsm_init+0xce) [0x7fdf12ebe351]
+./install/bin/open5gs-smfd(+0x82c65) [0x563c05d54c65]
+./install/bin/open5gs-smfd(+0xeecd) [0x563c05ce0ecd]
+./install/bin/open5gs-smfd(+0xe25e) [0x563c05ce025e]
+./install/bin/open5gs-smfd(+0xeb76) [0x563c05ce0b76]
+/lib/x86_64-linux-gnu/libc.so.6(+0x29d90) [0x7fdf11dbfd90]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80) [0x7fdf11dbfe40]
+./install/bin/open5gs-smfd(+0xe185) [0x563c05ce0185]
+Open5GS daemon v2.6.4-22-g93bcd7f
+
+06/19 03:20:01.391: [app] INFO: Configuration: '/home/vagrant/joder/open5gs/install/etc/open5gs/smf.yaml' (../lib/app/ogs-init.c:126)
+06/19 03:20:01.391: [app] INFO: File Logging: '/home/vagrant/joder/open5gs/install/var/log/open5gs/smf.log' (../lib/app/ogs-init.c:129)
+06/19 03:20:01.472: [metrics] INFO: metrics_server() [http://127.0.0.4]:9090 (../lib/metrics/prometheus/context.c:299)
+06/19 03:20:01.545: [gtp] INFO: gtp_server() [127.0.0.4]:2123 (../lib/gtp/path.c:30)
+06/19 03:20:01.545: [gtp] INFO: gtp_server() [::1]:2123 (../lib/gtp/path.c:30)
+06/19 03:20:01.545: [gtp] INFO: gtp_server() [127.0.0.4]:2152 (../lib/gtp/path.c:30)
+06/19 03:20:01.545: [gtp] INFO: gtp_server() [::1]:2152 (../lib/gtp/path.c:30)
+06/19 03:20:01.545: [pfcp] INFO: pfcp_server() [127.0.0.4]:8805 (../lib/pfcp/path.c:30)
+06/19 03:20:01.545: [pfcp] INFO: pfcp_server() [::1]:8805 (../lib/pfcp/path.c:30)
+06/19 03:20:01.545: [pfcp] INFO: ogs_pfcp_connect() [127.0.0.7]:8805 (../lib/pfcp/path.c:61)
+06/19 03:20:01.546: [sbi] INFO: NF Service [nsmf-pdusession] (../lib/sbi/context.c:1438)
+06/19 03:20:01.546: [sbi] FATAL: [No-CLIENT:No-SCP] Cannot send request [nnrf-nfm:nnrf-nfm:v1] (../lib/sbi/path.c:537)
+06/19 03:20:01.546: [sbi] FATAL: ogs_sbi_send_notification_request: should not be reached. (../lib/sbi/path.c:543)
+06/19 03:20:01.546: [core] FATAL: backtrace() returned 14 addresses (../lib/core/ogs-abort.c:37)
+/home/vagrant/joder/open5gs/install/lib/x86_64-linux-gnu/libogssbi.so.2(ogs_sbi_send_notification_request+0x4b8) [0x7f8c1a878cb3]
+/home/vagrant/joder/open5gs/install/lib/x86_64-linux-gnu/libogssbi.so.2(ogs_nnrf_nfm_send_nf_register+0xfc) [0x7f8c1a875c17]
+/home/vagrant/joder/open5gs/install/lib/x86_64-linux-gnu/libogssbi.so.2(ogs_sbi_nf_state_will_register+0x2b6) [0x7f8c1a879eb5]
+/home/vagrant/joder/open5gs/install/lib/x86_64-linux-gnu/libogscore.so.2(+0x2059f) [0x7f8c1a8b159f]
+/home/vagrant/joder/open5gs/install/lib/x86_64-linux-gnu/libogscore.so.2(ogs_fsm_init+0x179) [0x7f8c1a8b19c9]
+/home/vagrant/joder/open5gs/install/lib/x86_64-linux-gnu/libogssbi.so.2(ogs_sbi_nf_fsm_init+0xce) [0x7f8c1a879351]
+./install/bin/open5gs-smfd(+0x82c65) [0x55a6db6e1c65]
+./install/bin/open5gs-smfd(+0xeecd) [0x55a6db66decd]
+./install/bin/open5gs-smfd(+0xe25e) [0x55a6db66d25e]
+./install/bin/open5gs-smfd(+0xeb76) [0x55a6db66db76]
+/lib/x86_64-linux-gnu/libc.so.6(+0x29d90) [0x7f8c19779d90]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80) [0x7f8c19779e40]
+./install/bin/open5gs-smfd(+0xe185) [0x55a6db66d185]
+Open5GS daemon v2.6.4-22-g93bcd7f
+
+06/19 03:21:07.513: [app] INFO: Configuration: '/home/vagrant/joder/open5gs/install/etc/open5gs/smf.yaml' (../lib/app/ogs-init.c:126)
+06/19 03:21:07.513: [app] INFO: File Logging: '/home/vagrant/joder/open5gs/install/var/log/open5gs/smf.log' (../lib/app/ogs-init.c:129)
+06/19 03:21:07.545: [metrics] INFO: metrics_server() [http://127.0.0.4]:9090 (../lib/metrics/prometheus/context.c:299)
+06/19 03:21:07.581: [gtp] INFO: gtp_server() [127.0.0.4]:2123 (../lib/gtp/path.c:30)
+06/19 03:21:07.581: [gtp] INFO: gtp_server() [::1]:2123 (../lib/gtp/path.c:30)
+06/19 03:21:07.581: [gtp] INFO: gtp_server() [127.0.0.4]:2152 (../lib/gtp/path.c:30)
+06/19 03:21:07.581: [gtp] INFO: gtp_server() [::1]:2152 (../lib/gtp/path.c:30)
+06/19 03:21:07.581: [pfcp] INFO: pfcp_server() [127.0.0.4]:8805 (../lib/pfcp/path.c:30)
+06/19 03:21:07.581: [pfcp] INFO: pfcp_server() [::1]:8805 (../lib/pfcp/path.c:30)
+06/19 03:21:07.582: [pfcp] INFO: ogs_pfcp_connect() [127.0.0.7]:8805 (../lib/pfcp/path.c:61)
+06/19 03:21:07.582: [sbi] INFO: NF Service [nsmf-pdusession] (../lib/sbi/context.c:1438)
+06/19 03:21:07.582: [sbi] FATAL: [No-CLIENT:No-SCP] Cannot send request [nnrf-nfm:nnrf-nfm:v1] (../lib/sbi/path.c:537)
+06/19 03:21:07.582: [sbi] FATAL: ogs_sbi_send_notification_request: should not be reached. (../lib/sbi/path.c:543)
+06/19 03:21:07.583: [core] FATAL: backtrace() returned 14 addresses (../lib/core/ogs-abort.c:37)
+/home/vagrant/joder/open5gs/install/lib/x86_64-linux-gnu/libogssbi.so.2(ogs_sbi_send_notification_request+0x4b8) [0x7f3eacb68cb3]
+/home/vagrant/joder/open5gs/install/lib/x86_64-linux-gnu/libogssbi.so.2(ogs_nnrf_nfm_send_nf_register+0xfc) [0x7f3eacb65c17]
+/home/vagrant/joder/open5gs/install/lib/x86_64-linux-gnu/libogssbi.so.2(ogs_sbi_nf_state_will_register+0x2b6) [0x7f3eacb69eb5]
+/home/vagrant/joder/open5gs/install/lib/x86_64-linux-gnu/libogscore.so.2(+0x2059f) [0x7f3eacba159f]
+/home/vagrant/joder/open5gs/install/lib/x86_64-linux-gnu/libogscore.so.2(ogs_fsm_init+0x179) [0x7f3eacba19c9]
+/home/vagrant/joder/open5gs/install/lib/x86_64-linux-gnu/libogssbi.so.2(ogs_sbi_nf_fsm_init+0xce) [0x7f3eacb69351]
+./install/bin/open5gs-smfd(+0x82c65) [0x55f3ef95ec65]
+./install/bin/open5gs-smfd(+0xeecd) [0x55f3ef8eaecd]
+./install/bin/open5gs-smfd(+0xe25e) [0x55f3ef8ea25e]
+./install/bin/open5gs-smfd(+0xeb76) [0x55f3ef8eab76]
+/lib/x86_64-linux-gnu/libc.so.6(+0x29d90) [0x7f3eaba69d90]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80) [0x7f3eaba69e40]
+./install/bin/open5gs-smfd(+0xe185) [0x55f3ef8ea185]

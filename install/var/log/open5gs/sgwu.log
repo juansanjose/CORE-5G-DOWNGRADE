@@ -1,0 +1,13 @@
+Open5GS daemon v2.6.4-22-g93bcd7f
+
+06/15 21:39:42.030: [app] INFO: Configuration: '/home/vagrant/joder/open5gs/install/etc/open5gs/sgwu.yaml' (../lib/app/ogs-init.c:126)
+06/15 21:39:42.030: [app] INFO: File Logging: '/home/vagrant/joder/open5gs/install/var/log/open5gs/sgwu.log' (../lib/app/ogs-init.c:129)
+06/15 21:39:42.064: [pfcp] INFO: pfcp_server() [127.0.0.6]:8805 (../lib/pfcp/path.c:30)
+06/15 21:39:42.064: [gtp] INFO: gtp_server() [127.0.0.6]:2152 (../lib/gtp/path.c:30)
+06/15 21:39:42.064: [app] INFO: SGW-U initialize...done (../src/sgwu/app.c:31)
+06/15 21:39:42.161: [pfcp] INFO: ogs_pfcp_connect() [127.0.0.3]:8805 (../lib/pfcp/path.c:61)
+06/15 21:39:42.162: [sgwu] INFO: PFCP associated [127.0.0.3]:8805 (../src/sgwu/pfcp-sm.c:179)
+06/15 21:46:22.909: [app] INFO: SIGINT received (../src/main.c:53)
+06/15 21:46:22.909: [app] INFO: Open5GS daemon terminating... (../src/main.c:226)
+06/15 21:46:22.911: [sgwu] INFO: PFCP de-associated [127.0.0.3]:8805 (../src/sgwu/pfcp-sm.c:194)
+06/15 21:46:22.912: [app] INFO: SGW-U terminate...done (../src/sgwu/app.c:39)

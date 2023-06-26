@@ -1,0 +1,24 @@
+Open5GS daemon v2.6.4-22-g93bcd7f
+
+06/19 03:20:01.336: [app] INFO: Configuration: '/home/vagrant/joder/open5gs/install/etc/open5gs/nssf.yaml' (../lib/app/ogs-init.c:126)
+06/19 03:20:01.336: [app] INFO: File Logging: '/home/vagrant/joder/open5gs/install/var/log/open5gs/nssf.log' (../lib/app/ogs-init.c:129)
+06/19 03:20:01.349: [sbi] INFO: NF Service [nnssf-nsselection] (../lib/sbi/context.c:1438)
+06/19 03:20:01.350: [sbi] INFO: nghttp2_server() [http://127.0.0.14]:7777 (../lib/sbi/nghttp2-server.c:395)
+06/19 03:20:01.358: [app] INFO: NSSF initialize...done (../src/nssf/app.c:31)
+06/19 03:20:01.362: [sbi] INFO: [2d320a16-0e50-41ee-9891-119a7648d214] NF registered [Heartbeat:10s] (../lib/sbi/nf-sm.c:214)
+06/19 03:20:27.968: [app] INFO: SIGTERM received (../src/main.c:53)
+06/19 03:20:27.968: [app] INFO: Open5GS daemon terminating... (../src/main.c:226)
+06/19 03:20:27.968: [sbi] INFO: [2d320a16-0e50-41ee-9891-119a7648d214] NF de-registered (../lib/sbi/nf-sm.c:240)
+06/19 03:20:27.970: [app] INFO: NSSF terminate...done (../src/nssf/app.c:39)
+Open5GS daemon v2.6.4-22-g93bcd7f
+
+06/19 03:21:07.480: [app] INFO: Configuration: '/home/vagrant/joder/open5gs/install/etc/open5gs/nssf.yaml' (../lib/app/ogs-init.c:126)
+06/19 03:21:07.480: [app] INFO: File Logging: '/home/vagrant/joder/open5gs/install/var/log/open5gs/nssf.log' (../lib/app/ogs-init.c:129)
+06/19 03:21:07.490: [sbi] INFO: NF Service [nnssf-nsselection] (../lib/sbi/context.c:1438)
+06/19 03:21:07.494: [sbi] INFO: nghttp2_server() [http://127.0.0.14]:7777 (../lib/sbi/nghttp2-server.c:395)
+06/19 03:21:07.500: [app] INFO: NSSF initialize...done (../src/nssf/app.c:31)
+06/19 03:21:07.503: [sbi] INFO: [549d2766-0e50-41ee-86f2-4181acc66a6b] NF registered [Heartbeat:10s] (../lib/sbi/nf-sm.c:214)
+06/19 03:23:16.175: [app] INFO: SIGTERM received (../src/main.c:53)
+06/19 03:23:16.176: [app] INFO: Open5GS daemon terminating... (../src/main.c:226)
+06/19 03:23:16.176: [sbi] INFO: [549d2766-0e50-41ee-86f2-4181acc66a6b] NF de-registered (../lib/sbi/nf-sm.c:240)
+06/19 03:23:16.178: [app] INFO: NSSF terminate...done (../src/nssf/app.c:39)

@@ -115,19 +115,19 @@ ogs_nas_5gmm_cause_t gmm_handle_registration_request(amf_ue_t *amf_ue,
         ~OGS_REGISTRATION_CLEARTEXT_PRESENT) {
         ogs_error("Non cleartext IEs is included [0x%llx]",
                 (long long)registration_request->presencemask);
-        return OGS_5GMM_CAUSE_SEMANTICALLY_INCORRECT_MESSAGE;
+        return OGS_5GMM_CAUSE_5GS_SERVICES_NOT_ALLOWED ;
     }
 
     if (!h.integrity_protected &&
         (registration_request->presencemask &
         OGS_NAS_5GS_REGISTRATION_REQUEST_NAS_MESSAGE_CONTAINER_PRESENT)) {
         ogs_error("NAS container present without Integrity-protected");
-        return OGS_5GMM_CAUSE_SEMANTICALLY_INCORRECT_MESSAGE;
+        return OGS_5GMM_CAUSE_5GS_SERVICES_NOT_ALLOWED ;
     }
 
     if (!mobile_identity->length || !mobile_identity->buffer) {
         ogs_error("No Mobile Identity");
-        return OGS_5GMM_CAUSE_SEMANTICALLY_INCORRECT_MESSAGE;
+        return OGS_5GMM_CAUSE_5GS_SERVICES_NOT_ALLOWED ;
     }
 
     mobile_identity_header =
@@ -146,7 +146,7 @@ ogs_nas_5gmm_cause_t gmm_handle_registration_request(amf_ue_t *amf_ue,
                 OGS_PROTECTION_SCHEME_PROFILE_B) {
             ogs_error("Invalid ProtectionSchemeID(%d) in SUCI",
                 mobile_identity_suci->protection_scheme_id);
-            return OGS_5GMM_CAUSE_SEMANTICALLY_INCORRECT_MESSAGE;
+            return OGS_5GMM_CAUSE_5GS_SERVICES_NOT_ALLOWED ;
         }
         amf_ue_set_suci(amf_ue, mobile_identity);
         ogs_info("[%s]    SUCI", amf_ue->suci);
@@ -156,7 +156,7 @@ ogs_nas_5gmm_cause_t gmm_handle_registration_request(amf_ue_t *amf_ue,
             (ogs_nas_5gs_mobile_identity_guti_t *)mobile_identity->buffer;
         if (!mobile_identity_guti) {
             ogs_error("No mobile identity");
-            return OGS_5GMM_CAUSE_SEMANTICALLY_INCORRECT_MESSAGE;
+            return OGS_5GMM_CAUSE_5GS_SERVICES_NOT_ALLOWED ;
         }
 
         ogs_nas_5gs_mobile_identity_guti_to_nas_guti(
@@ -301,7 +301,7 @@ ogs_nas_5gmm_cause_t gmm_handle_registration_request(amf_ue_t *amf_ue,
     if (served_tai_index < 0) {
         ogs_error("Cannot find Served TAI[PLMN_ID:%06x,TAC:%d]",
             ogs_plmn_id_hexdump(&amf_ue->nr_tai.plmn_id), amf_ue->nr_tai.tac.v);
-        return OGS_5GMM_CAUSE_TRACKING_AREA_NOT_ALLOWED;
+        return OGS_5GMM_CAUSE_5GS_SERVICES_NOT_ALLOWED;
     }
     ogs_debug("    SERVED_TAI_INDEX[%d]", served_tai_index);
 
@@ -320,7 +320,7 @@ ogs_nas_5gmm_cause_t gmm_handle_registration_request(amf_ue_t *amf_ue,
             ue_security_capability->nr_ea, ue_security_capability->nr_ia,
             amf_selected_enc_algorithm(amf_ue),
             amf_selected_int_algorithm(amf_ue));
-        return OGS_5GMM_CAUSE_UE_SECURITY_CAPABILITIES_MISMATCH;
+        return OGS_5GMM_CAUSE_5GS_SERVICES_NOT_ALLOWED;
     }
 
     if (amf_ue_is_rat_restricted(amf_ue)) {
@@ -360,7 +360,7 @@ ogs_nas_5gmm_cause_t gmm_handle_registration_update(amf_ue_t *amf_ue,
     if (served_tai_index < 0) {
         ogs_error("Cannot find Served TAI[PLMN_ID:%06x,TAC:%d]",
             ogs_plmn_id_hexdump(&amf_ue->nr_tai.plmn_id), amf_ue->nr_tai.tac.v);
-        return OGS_5GMM_CAUSE_TRACKING_AREA_NOT_ALLOWED;
+        return OGS_5GMM_CAUSE_5GS_SERVICES_NOT_ALLOWED;
     }
     ogs_debug("    SERVED_TAI_INDEX[%d]", served_tai_index);
 
@@ -422,7 +422,7 @@ ogs_nas_5gmm_cause_t gmm_handle_registration_update(amf_ue_t *amf_ue,
                         amf_ue->requested_nssai.s_nssai[i].sst,
                         amf_ue->requested_nssai.s_nssai[i].sd.v);
             }
-            return OGS_5GMM_CAUSE_NO_NETWORK_SLICES_AVAILABLE;
+            return OGS_5GMM_CAUSE_5GS_SERVICES_NOT_ALLOWED;
         }
     }
 
@@ -571,14 +571,14 @@ ogs_nas_5gmm_cause_t gmm_handle_service_request(amf_ue_t *amf_ue,
         service_request->presencemask & ~OGS_SERVICE_CLEARTEXT_PRESENT) {
         ogs_error("Non cleartext IEs is included [0x%llx]",
                 (long long)service_request->presencemask);
-        return OGS_5GMM_CAUSE_SEMANTICALLY_INCORRECT_MESSAGE;
+        return OGS_5GMM_CAUSE_5GS_SERVICES_NOT_ALLOWED ;
     }
 
     if (!h.integrity_protected &&
         (service_request->presencemask &
         OGS_NAS_5GS_SERVICE_REQUEST_NAS_MESSAGE_CONTAINER_PRESENT)) {
         ogs_error("NAS container present without Integrity-protected");
-        return OGS_5GMM_CAUSE_SEMANTICALLY_INCORRECT_MESSAGE;
+        return OGS_5GMM_CAUSE_5GS_SERVICES_NOT_ALLOWED ;
     }
 
     amf_ue->nas.message_type = OGS_NAS_5GS_SERVICE_REQUEST;
@@ -633,12 +633,12 @@ ogs_nas_5gmm_cause_t gmm_handle_service_request(amf_ue_t *amf_ue,
     gmm_cause = gmm_cause_from_access_control(&amf_ue->nr_tai.plmn_id);
     if (gmm_cause != OGS_5GMM_CAUSE_REQUEST_ACCEPTED) {
         ogs_error("Rejected by PLMN-ID(in TAI) access control");
-        return gmm_cause;
+        return OGS_5GMM_CAUSE_5GS_SERVICES_NOT_ALLOWED;
     }
     gmm_cause = gmm_cause_from_access_control(&amf_ue->nr_cgi.plmn_id);
     if (gmm_cause != OGS_5GMM_CAUSE_REQUEST_ACCEPTED) {
         ogs_error("Rejected by PLMN-ID(in CGI) access control");
-        return gmm_cause;
+        return OGS_5GMM_CAUSE_5GS_SERVICES_NOT_ALLOWED;
     }
 
     /* Check TAI */
@@ -646,7 +646,7 @@ ogs_nas_5gmm_cause_t gmm_handle_service_request(amf_ue_t *amf_ue,
     if (served_tai_index < 0) {
         ogs_error("Cannot find Served TAI[PLMN_ID:%06x,TAC:%d]",
             ogs_plmn_id_hexdump(&amf_ue->nr_tai.plmn_id), amf_ue->nr_tai.tac.v);
-        return OGS_5GMM_CAUSE_TRACKING_AREA_NOT_ALLOWED;
+        return OGS_5GMM_CAUSE_5GS_SERVICES_NOT_ALLOWED;
     }
     ogs_debug("    SERVED_TAI_INDEX[%d]", served_tai_index);
 
@@ -910,7 +910,7 @@ int gmm_handle_identity_response(amf_ue_t *amf_ue,
                 OGS_PROTECTION_SCHEME_PROFILE_B) {
             ogs_error("Invalid ProtectionSchemeID(%d) in SUCI",
                 mobile_identity_suci->protection_scheme_id);
-            return OGS_ERROR;
+            return OGS_5GMM_CAUSE_5GS_SERVICES_NOT_ALLOWED;
         }
         amf_ue_set_suci(amf_ue, mobile_identity);
         ogs_info("[%s]    SUCI", amf_ue->suci);
@@ -951,7 +951,7 @@ ogs_nas_5gmm_cause_t gmm_handle_security_mode_complete(amf_ue_t *amf_ue,
         OGS_NAS_5GS_SECURITY_MODE_COMPLETE_NAS_MESSAGE_CONTAINER_PRESENT)
             == 0) {
         ogs_error("No NAS Message Container in Security mode complete message");
-        return OGS_5GMM_CAUSE_MESSAGE_NOT_COMPATIBLE_WITH_THE_PROTOCOL_STATE;
+        return OGS_5GMM_CAUSE_5GS_SERVICES_NOT_ALLOWED;
     }
 
     if (security_mode_complete->presencemask &
@@ -1100,7 +1100,7 @@ int gmm_handle_ul_nas_transport(amf_ue_t *amf_ue,
                 ogs_error("[%s] No Session Context [%d]",
                     amf_ue->supi, gsm_header->message_type);
                 r = nas_5gs_send_gmm_status(amf_ue,
-                    OGS_5GMM_CAUSE_INSUFFICIENT_USER_PLANE_RESOURCES_FOR_THE_PDU_SESSION);
+                    OGS_5GMM_CAUSE_5GS_SERVICES_NOT_ALLOWED);
                 ogs_expect(r == OGS_OK);
                 ogs_assert(r != OGS_ERROR);
                 return OGS_ERROR;
@@ -1396,7 +1396,7 @@ static ogs_nas_5gmm_cause_t gmm_handle_nas_message_container(
     if (!nas_message_container->buffer || !nas_message_container->length) {
         ogs_error("No NAS message container [%p:%d]",
             nas_message_container->buffer,nas_message_container->length);
-        return OGS_5GMM_CAUSE_MESSAGE_NOT_COMPATIBLE_WITH_THE_PROTOCOL_STATE;
+        return OGS_5GMM_CAUSE_5GS_SERVICES_NOT_ALLOWED;
     }
 
     nasbuf = ogs_pkbuf_alloc(NULL, nas_message_container->length);
@@ -1438,10 +1438,10 @@ static ogs_nas_5gmm_cause_t gmm_handle_nas_message_container(
     if (ogs_nas_5gmm_decode(&nas_message, nasbuf) != OGS_OK) {
         ogs_error("ogs_nas_5gmm_decode() failed");
         ogs_pkbuf_free(nasbuf);
-        return OGS_5GMM_CAUSE_SEMANTICALLY_INCORRECT_MESSAGE;
+        return OGS_5GMM_CAUSE_5GS_SERVICES_NOT_ALLOWED ;
     }
 
-    gmm_cause = OGS_5GMM_CAUSE_SEMANTICALLY_INCORRECT_MESSAGE;
+    gmm_cause = OGS_5GMM_CAUSE_5GS_SERVICES_NOT_ALLOWED ;
 
     switch (nas_message.gmm.h.message_type) {
         case OGS_NAS_5GS_REGISTRATION_REQUEST:
@@ -1485,5 +1485,5 @@ static uint8_t gmm_cause_from_access_control(ogs_plmn_id_t *plmn_id)
     if (amf_self()->default_reject_cause)
         return amf_self()->default_reject_cause;
 
-    return OGS_5GMM_CAUSE_PLMN_NOT_ALLOWED;
+    return OGS_5GMM_CAUSE_5GS_SERVICES_NOT_ALLOWED;
 }

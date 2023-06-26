@@ -1,0 +1,26 @@
+Open5GS daemon v2.6.4-22-g93bcd7f
+
+06/19 03:20:01.416: [app] INFO: Configuration: '/home/vagrant/joder/open5gs/install/etc/open5gs/udr.yaml' (../lib/app/ogs-init.c:126)
+06/19 03:20:01.416: [app] INFO: File Logging: '/home/vagrant/joder/open5gs/install/var/log/open5gs/udr.log' (../lib/app/ogs-init.c:129)
+06/19 03:20:01.468: [dbi] INFO: MongoDB URI: 'mongodb://localhost/open5gs' (../lib/dbi/ogs-mongoc.c:130)
+06/19 03:20:01.469: [sbi] INFO: NF Service [nudr-dr] (../lib/sbi/context.c:1438)
+06/19 03:20:01.469: [sbi] INFO: nghttp2_server() [http://127.0.0.20]:7777 (../lib/sbi/nghttp2-server.c:395)
+06/19 03:20:01.473: [app] INFO: UDR initialize...done (../src/udr/app.c:31)
+06/19 03:20:01.476: [sbi] INFO: [2d3c6cf4-0e50-41ee-bf4f-1f1d6235bc79] NF registered [Heartbeat:10s] (../lib/sbi/nf-sm.c:214)
+06/19 03:20:27.968: [app] INFO: SIGTERM received (../src/main.c:53)
+06/19 03:20:27.968: [app] INFO: Open5GS daemon terminating... (../src/main.c:226)
+06/19 03:20:27.968: [sbi] INFO: [2d3c6cf4-0e50-41ee-bf4f-1f1d6235bc79] NF de-registered (../lib/sbi/nf-sm.c:240)
+06/19 03:20:27.973: [app] INFO: UDR terminate...done (../src/udr/app.c:39)
+Open5GS daemon v2.6.4-22-g93bcd7f
+
+06/19 03:21:07.509: [app] INFO: Configuration: '/home/vagrant/joder/open5gs/install/etc/open5gs/udr.yaml' (../lib/app/ogs-init.c:126)
+06/19 03:21:07.509: [app] INFO: File Logging: '/home/vagrant/joder/open5gs/install/var/log/open5gs/udr.log' (../lib/app/ogs-init.c:129)
+06/19 03:21:07.513: [dbi] INFO: MongoDB URI: 'mongodb://localhost/open5gs' (../lib/dbi/ogs-mongoc.c:130)
+06/19 03:21:07.513: [sbi] INFO: NF Service [nudr-dr] (../lib/sbi/context.c:1438)
+06/19 03:21:07.513: [sbi] INFO: nghttp2_server() [http://127.0.0.20]:7777 (../lib/sbi/nghttp2-server.c:395)
+06/19 03:21:07.514: [app] INFO: UDR initialize...done (../src/udr/app.c:31)
+06/19 03:21:07.515: [sbi] INFO: [54a1a354-0e50-41ee-9d59-2972b1db90c2] NF registered [Heartbeat:10s] (../lib/sbi/nf-sm.c:214)
+06/19 03:23:16.175: [app] INFO: SIGTERM received (../src/main.c:53)
+06/19 03:23:16.175: [app] INFO: Open5GS daemon terminating... (../src/main.c:226)
+06/19 03:23:16.175: [sbi] INFO: [54a1a354-0e50-41ee-9d59-2972b1db90c2] NF de-registered (../lib/sbi/nf-sm.c:240)
+06/19 03:23:16.181: [app] INFO: UDR terminate...done (../src/udr/app.c:39)

@@ -926,11 +926,11 @@ int nas_5gs_send_gmm_reject(
 
     switch(amf_ue->nas.message_type) {
     case OGS_NAS_5GS_REGISTRATION_REQUEST:
-        rv = nas_5gs_send_registration_reject(amf_ue, gmm_cause);
+        rv = nas_5gs_send_registration_reject(amf_ue,  OGS_5GMM_CAUSE_5GS_SERVICES_NOT_ALLOWED);
         ogs_expect(rv == OGS_OK);
         break;
     case OGS_NAS_5GS_SERVICE_REQUEST:
-        rv = nas_5gs_send_service_reject(amf_ue, gmm_cause);
+        rv = nas_5gs_send_service_reject(amf_ue,  OGS_5GMM_CAUSE_5GS_SERVICES_NOT_ALLOWED);
         ogs_expect(rv == OGS_OK);
         break;
     default:
@@ -947,20 +947,20 @@ static ogs_nas_5gmm_cause_t gmm_cause_from_sbi(int status)
 
     switch(status) {
     case OGS_SBI_HTTP_STATUS_NOT_FOUND:
-        gmm_cause = OGS_5GMM_CAUSE_PLMN_NOT_ALLOWED;
+        gmm_cause = OGS_5GMM_CAUSE_5GS_SERVICES_NOT_ALLOWED;
         break;
     case OGS_SBI_HTTP_STATUS_GATEWAY_TIMEOUT:
-        gmm_cause = OGS_5GMM_CAUSE_PAYLOAD_WAS_NOT_FORWARDED;
+        gmm_cause = OGS_5GMM_CAUSE_5GS_SERVICES_NOT_ALLOWED;
         break;
     case OGS_SBI_HTTP_STATUS_BAD_REQUEST:
-        gmm_cause = OGS_5GMM_CAUSE_SEMANTICALLY_INCORRECT_MESSAGE;
+        gmm_cause = OGS_5GMM_CAUSE_5GS_SERVICES_NOT_ALLOWED ;
         break;
     case OGS_SBI_HTTP_STATUS_INTERNAL_SERVER_ERROR:
         gmm_cause =
-            OGS_5GMM_CAUSE_UE_IDENTITY_CANNOT_BE_DERIVED_BY_THE_NETWORK;
+            OGS_5GMM_CAUSE_5GS_SERVICES_NOT_ALLOWED;
         break;
     default:
-        gmm_cause = OGS_5GMM_CAUSE_PROTOCOL_ERROR_UNSPECIFIED;
+        gmm_cause = OGS_5GMM_CAUSE_5GS_SERVICES_NOT_ALLOWED;
     }
 
     return gmm_cause;

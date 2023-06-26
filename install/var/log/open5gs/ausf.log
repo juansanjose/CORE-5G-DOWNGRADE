@@ -1,0 +1,28 @@
+Open5GS daemon v2.6.4-22-g93bcd7f
+
+06/19 03:20:01.345: [app] INFO: Configuration: '/home/vagrant/joder/open5gs/install/etc/open5gs/ausf.yaml' (../lib/app/ogs-init.c:126)
+06/19 03:20:01.345: [app] INFO: File Logging: '/home/vagrant/joder/open5gs/install/var/log/open5gs/ausf.log' (../lib/app/ogs-init.c:129)
+06/19 03:20:01.366: [sbi] INFO: NF Service [nausf-auth] (../lib/sbi/context.c:1438)
+06/19 03:20:01.367: [sbi] INFO: nghttp2_server() [http://127.0.0.11]:7777 (../lib/sbi/nghttp2-server.c:395)
+06/19 03:20:01.367: [app] INFO: AUSF initialize...done (../src/ausf/app.c:31)
+06/19 03:20:01.385: [sbi] INFO: [2d349de4-0e50-41ee-8e67-7df7c89e1ee0] NF registered [Heartbeat:10s] (../lib/sbi/nf-sm.c:214)
+06/19 03:20:01.386: [sbi] INFO: [2d37a8ea-0e50-41ee-84b2-255c66b3d716] Subscription created until 2023-06-20T03:20:01.385947+00:00 [duration:86400,validity:86399.999180,patch:43199.999590] (../lib/sbi/nnrf-handler.c:509)
+06/19 03:20:27.968: [app] INFO: SIGTERM received (../src/main.c:53)
+06/19 03:20:27.968: [app] INFO: Open5GS daemon terminating... (../src/main.c:226)
+06/19 03:20:27.968: [sbi] INFO: [2d349de4-0e50-41ee-8e67-7df7c89e1ee0] NF de-registered (../lib/sbi/nf-sm.c:240)
+06/19 03:20:27.970: [app] INFO: AUSF terminate...done (../src/ausf/app.c:39)
+Open5GS daemon v2.6.4-22-g93bcd7f
+
+06/19 03:21:07.491: [app] INFO: Configuration: '/home/vagrant/joder/open5gs/install/etc/open5gs/ausf.yaml' (../lib/app/ogs-init.c:126)
+06/19 03:21:07.491: [app] INFO: File Logging: '/home/vagrant/joder/open5gs/install/var/log/open5gs/ausf.log' (../lib/app/ogs-init.c:129)
+06/19 03:21:07.502: [sbi] INFO: NF Service [nausf-auth] (../lib/sbi/context.c:1438)
+06/19 03:21:07.503: [sbi] INFO: nghttp2_server() [http://127.0.0.11]:7777 (../lib/sbi/nghttp2-server.c:395)
+06/19 03:21:07.505: [app] INFO: AUSF initialize...done (../src/ausf/app.c:31)
+06/19 03:21:07.506: [sbi] INFO: [54a0074c-0e50-41ee-b086-cd433b17196c] NF registered [Heartbeat:10s] (../lib/sbi/nf-sm.c:214)
+06/19 03:21:07.507: [sbi] INFO: [54a0e5fe-0e50-41ee-9857-214cbe202114] Subscription created until 2023-06-20T03:21:07.506765+00:00 [duration:86400,validity:86399.999635,patch:43199.999817] (../lib/sbi/nnrf-handler.c:509)
+06/19 03:21:07.520: [sbi] INFO: [54a29a0c-0e50-41ee-b622-47944bbe451a] (NRF-notify) NF registered (../lib/sbi/nnrf-handler.c:725)
+06/19 03:21:07.520: [sbi] INFO: [54a29a0c-0e50-41ee-b622-47944bbe451a] (NRF-notify) NF Profile updated (../lib/sbi/nnrf-handler.c:735)
+06/19 03:23:16.175: [app] INFO: SIGTERM received (../src/main.c:53)
+06/19 03:23:16.175: [app] INFO: Open5GS daemon terminating... (../src/main.c:226)
+06/19 03:23:16.176: [sbi] INFO: [54a0074c-0e50-41ee-b086-cd433b17196c] NF de-registered (../lib/sbi/nf-sm.c:240)
+06/19 03:23:16.178: [app] INFO: AUSF terminate...done (../src/ausf/app.c:39)
